@@ -1,0 +1,130 @@
+html {box-sizing: border-box;}
+
+*, *:before *:after {box-sizing: inherit;}
+
+body{
+margin: 0;
+font-weight: 400;
+font-family: sans-serif;
+font-size: 20px;
+line-height: 33px;
+background-color: black;
+}
+
+
+.button {
+height: 100%;
+background-color: transparent;
+border: 0;
+}
+
+.header-container {
+Height: 38rem;
+
+}
+
+.container {
+display: grid;
+grid-template-columns: 5% auto 5%; 
+
+}
+
+.header-container {
+position: relative;
+
+}
+
+.nav-container {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 2.5rem 0;
+}
+
+.nav-container-left {
+display: flex;
+flex-direction: row;
+}
+
+.header-links {
+display: flex;
+flex-direction: row;
+list-style: none;
+}
+
+
+nav a {
+ color: white;
+ font-size: 1.5rem;
+ list-style: none; 
+ text-decoration: none;  
+
+}
+
+.nav-list-left {
+margin-right: 3rem;
+}
+
+.nav-list-right {
+margin-left: 3rem;
+}
+
+.hero-content {
+
+}
+
+
+.hero-image {
+position: absolute;
+height: auto;
+width: 100%;
+object-fit: cover;
+top: 0; right: 0; bottom: 0; left: 0;
+z-index: -1;    
+}
+
+.hero-title {
+color: white;
+font-size: 3.5rem;
+text-shadow: 5px 5px 13px rgba(0,0,0,.5);   
+margin: 3.5rem 0 1rem 0; 
+padding: 1.5rem 0;
+}
+
+.hero-subtitle {
+color: white;
+max-width: 60%;
+margin: 0 0 1rem;
+}
+
+.hero-btn {
+background-color: #ff6d00;
+height: 3rem;
+padding: 0 1rem;
+border-radius: 4px;
+border: 0;
+font-family: sans-serif;
+font-size: 20px;
+font-weight: 400;
+color: white;
+}
+
+.hero-btn-text::after {
+background-image: url(https://www.npostart.nl/images/asset_player_play.svg);
+}
+
+
+.content-section{
+background-color: #1f1f1f;
+}
+
+.content-container{
+
+}
+
+.content-title {
+font-weight: 400;
+font-size: 1.75rem;
+color: white;
+margin: 40px 0 30px;
+}
