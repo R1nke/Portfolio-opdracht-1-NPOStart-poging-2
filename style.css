@@ -2,6 +2,7 @@ html {box-sizing: border-box;}
 
 *, *:before *:after {box-sizing: inherit;}
 
+
 body{
 margin: 0;
 font-weight: 400;
@@ -11,6 +12,10 @@ line-height: 33px;
 background-color: black;
 }
 
+.container {
+display: grid;
+grid-template-columns: 5vw 1fr 5vw;
+}
 
 .button {
 height: 100%;
@@ -18,28 +23,23 @@ background-color: transparent;
 border: 0;
 }
 
-.header-container {
-Height: 38rem;
-box-shadow: inset 200px 86px 287px 74px rgba(0,0,0,0.69);
-
-}
-
-.container {
-display: grid;
-grid-template-columns: 5% auto 5%; 
-
-}
-
-.header-container {
-position: relative;
-
-}
+/*NAVIGATIE*/
 
 .nav-container {
+position: absolute;
+z-index: 1;
+display: grid;
+grid-template-columns: 5vw 1fr 5vw;
+width: 100%;
+}
+
+.navbar {
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 padding: 2.5rem 0;
+grid-column-start: 2;
+
 }
 
 .nav-container-left {
@@ -52,7 +52,6 @@ display: flex;
 flex-direction: row;
 list-style: none;
 }
-
 
 nav a {
  color: white;
@@ -72,8 +71,25 @@ margin-right: 3rem;
 margin-left: 3rem;
 }
 
-.hero-content {
+/*HERO SECTION*/
+.hero-container {
+display: grid;
+grid-template-columns: 5vw 1fr 5vw;
+height: 38rem;
 
+}
+
+.hero-container::after {
+content: "";
+position: absolute;
+background: linear-gradient(to right, #000000 15%,#a8a8a8 31%,#a8a8a8 70%,#000000 85%);
+}
+
+.hero {
+display: flex;
+align-items: center;
+position: relative;
+grid-column-start: 2;
 }
 
 
