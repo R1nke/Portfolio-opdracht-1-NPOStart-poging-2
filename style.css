@@ -9,7 +9,7 @@ font-weight: 400;
 font-family: sans-serif;
 font-size: 20px;
 line-height: 33px;
-background-color: black;
+background-color: #1f1f1f;
 }
 
 .container {
@@ -82,7 +82,7 @@ height: 38rem;
 .hero-container::after {
 content: "";
 position: absolute;
-background: linear-gradient(to right, #000000 15%,#a8a8a8 31%,#a8a8a8 70%,#000000 85%);
+background: linear-gradient(to right, black, transparent);
 }
 
 .hero {
@@ -100,7 +100,7 @@ width: 100%;
 object-fit: cover;
 top: 0; right: 0; bottom: 0; left: 0;
 box-shadow: inset 76px 28px 300px 38px rgba(0,0,0,0.75);
-z-index: -1;    
+z-index: -1;
 }
 
 .hero-title {
@@ -135,35 +135,56 @@ background-image: url(https://www.npostart.nl/images/asset_player_play.svg);
 
 
 .content-section{
-background-color: #1f1f1f;
+display: grid;
+grid-template-columns: 5vw 1fr 5vw;
 }
 
 .content-container{
-
+    grid-column-start: 2;
 }
 
 .content-title {
 font-weight: 400;
-font-size: 1.75rem;
+font-size: 1.6rem;
 color: white;
 margin: 40px 0 30px;
 }
 
+.content-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+.content-card {
+    min-height: 17vh;
+}
 
+
+.content-card:nth-child(1){
+    grid-column: span 2;
+}
+
+.content-card-img {
+    max-width: 40vw;
+}
 
 /*FOOTER*/
 
-.footer-links-top {
-display: flex;
-}
 
 .footer-container {
-display: flex;
-flex-direction: column;
+display: grid;
+grid-template-columns: 5vw 1fr 5vw;
 
+}
+
+.footer-links-top{
+grid-column-start: 2;
+display: flex;
+flex-direction: row;    
 }
 
 .footer-links-bottom {
+grid-column-start: 2;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -182,6 +203,33 @@ padding: 0;
 text-decoration: none;
 padding: 0 1rem 0 0;     
 color: #999;
-font-size: 1rem;
+font-size: 0.9rem;
 font-weight: 400;
+
+}
+
+.link-group{
+    margin-right: 1rem;
+}
+.link-group-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+.link-group>ul {    
+    list-style: none;
+    padding: 0;
+    line-height: 120%;
+}
+
+.link-list-1 {    
+    columns: 3;
+    column-gap: 5rem;
+}
+
+.link-list-3 {    
+    columns: 2;
 }
