@@ -74,6 +74,14 @@ margin-left: 3rem;
 padding: 35px 0 25px;
 }
 
+.nav-list-right-inloggen::before {
+
+}
+
+.nav-list-right-zoeken::before {
+
+}
+
 /*HERO SECTION*/
 .hero-container {
 display: grid;
@@ -123,9 +131,10 @@ margin: 0 0 1rem;
 }
 
 .hero-btn {
-background-color: #ff6d00;
+position: relative;
+    background-color: #ff6d00;
 height: 3rem;
-padding: 0 1rem;
+padding: 0 4rem 0 1rem;
 border-radius: 4px;
 border: 0;
 font-family: sans-serif;
@@ -135,14 +144,14 @@ color: white;
 
 }
 
-.hero-btn-text {
-padding-right: 3rem;
-}
 
-.hero-btn-text::after {
-content: "";
+
+.hero-btn::after {
+position: absolute;
+    content: "";
 background-image: url(https://www.npostart.nl/images/asset_player_play.svg) no-repeat 50%;
 background-color: rgba(0, 0, 0, 0);
+
 }
 
 
@@ -154,7 +163,7 @@ background-color: #1f1f1f;
 
 .content-container{
     grid-column-start: 2;
-    width: 100%;
+
   
 }
 
@@ -168,23 +177,23 @@ margin: 40px 0 30px;
 .content-row {
  display: flex;
  flex-direction: row;
- height: 17rem;
- max-width: 100%;
+/* height: 17rem;*/
+
 overflow: auto;
 }
 
 .content-row-card {
+flex: 0 0 20rem;
 position: relative;
 width: 20rem;
-height: 100%;
 margin-right: 5px;
 }
 
 
 .card-image {
-
-max-width: 100%;
-
+    height: 100%;
+    width: 100%;
+object-fit: cover;
 }
 
 .content-row-title {
