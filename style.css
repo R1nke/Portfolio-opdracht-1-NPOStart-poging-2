@@ -53,22 +53,25 @@ flex-direction: row;
 list-style: none;
 }
 
+
 nav a {
  color: white;
  font-size: 1.5rem;
- text-decoration: none;  
+ text-decoration: none; 
 }
 
-nav a:hover{
-text-decoration: underline;
+.nav-list-left:hover, .nav-list-right:hover{
+border-bottom: 4px solid #ff6d00;
 }
 
 .nav-list-left {
 margin-right: 3rem;
+padding: 35px 0 25px;
 }
 
 .nav-list-right {
 margin-left: 3rem;
+padding: 35px 0 25px;
 }
 
 /*HERO SECTION*/
@@ -82,7 +85,10 @@ height: 38rem;
 .hero-container::after {
 content: "";
 position: absolute;
-background: linear-gradient(to right, black, transparent);
+height: 100%;
+width: 100%;
+background: linear-gradient(to right, rgba(0,0,0,1) 12%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.28) 60%, rgba(0,0,0,1) 92%);
+z-index: -1;
 }
 
 .hero {
@@ -99,7 +105,6 @@ height: auto;
 width: 100%;
 object-fit: cover;
 top: 0; right: 0; bottom: 0; left: 0;
-box-shadow: inset 76px 28px 300px 38px rgba(0,0,0,0.75);
 z-index: -1;
 }
 
@@ -127,16 +132,24 @@ font-family: sans-serif;
 font-size: 20px;
 font-weight: 400;
 color: white;
+
+}
+
+.hero-btn-text {
+padding-right: 3rem;
 }
 
 .hero-btn-text::after {
-background-image: url(https://www.npostart.nl/images/asset_player_play.svg);
+content: "";
+background-image: url(https://www.npostart.nl/images/asset_player_play.svg) no-repeat 50%;
+background-color: rgba(0, 0, 0, 0);
 }
 
 
 .content-section{
 display: grid;
 grid-template-columns: 5vw 1fr 5vw;
+background-color: #1f1f1f;
 }
 
 .content-container{
@@ -150,37 +163,105 @@ color: white;
 margin: 40px 0 30px;
 }
 
+.content-row {
+ display: flex;
+ flex-direction: row;
+ height: 20rem;
+}
+
+.content-row-card {
+    position: relative;
+    width: 12rem;
+height: 100%;
+}
+
+.content-row-title {
+padding-bottom: 7px;
+width: 100%;
+font-size: 1.1rem;
+color: white;
+text-align: center;
+bottom: 0;
+text-shadow: 0 2px 4px rgba(0,0,0,.6);
+margin: 0;
+
+}
+
+.content-card-img {
+    max-width: 100%;
+    object-fit: cover;
+    height: 100%;   
+}
+
 .content-grid{
     display: grid;
+    max-width: 90rem;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 12.5rem 12.5rem;
     grid-gap: 5px;
 }
 .content-card {
-    min-height: 17vh;
+position: relative;
 }
 
 
 .content-card:nth-child(1){
     grid-column: span 2;
+    grid-row: span 2;
 }
 
-/*.content-card-img {
-    max-width: 40vw;
+.content-card-img {
+    max-width: 100%;
+    object-fit: cover;
+    height: 100%;
+    position: absolute; 
+   
 }
-*/
+
+.content-card-hero-title {
+    padding-bottom: 7px;
+    width: 100%;
+font-size: 1.7rem;
+position: absolute;
+z-index: 3;
+color: white;
+text-align: center;
+bottom: 0;
+text-shadow: 0 2px 4px rgba(0,0,0,.6);
+margin: 0;
+vertical-align: bottom;
+}
+
+.content-card-title {
+padding-bottom: 7px;
+    width: 100%;
+font-size: 1.1rem;
+position: absolute;
+z-index: 3;
+color: white;
+text-align: center;
+bottom: 0;
+text-shadow: 0 2px 4px rgba(0,0,0,.6);
+margin: 0;
+vertical-align: bottom;
+}
+
+
 /*FOOTER*/
 
 
 .footer-container {
 display: grid;
 grid-template-columns: 5vw 1fr 5vw;
-
+margin-top: 7rem;
 }
 
 .footer-links-top{
 grid-column-start: 2;
 display: flex;
-flex-direction: row;    
+flex-direction: row; 
+justify-content: space-between;   
+max-width: 95%;
 }
 
 .footer-links-bottom {
@@ -189,6 +270,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 margin: 50px 0 40px;
+
 }
 
 .footer-links-bottom-list {
@@ -222,14 +304,19 @@ font-weight: 400;
 .link-group>ul {    
     list-style: none;
     padding: 0;
-    line-height: 120%;
+    line-height: 130%;
 }
 
 .link-list-1 {    
     columns: 3;
-    column-gap: 5rem;
+    column-gap: 7vw;
 }
 
 .link-list-3 {    
     columns: 2;
+    column-gap: 7vw;
 }
+
+
+
+/* voor de content row: container met een width van 100%. Daar op een overflow-x met auto op de container - Zie pathe site van Thomas om te spieken*/
