@@ -70,16 +70,32 @@ padding: 35px 0 25px;
 }
 
 .nav-list-right {
+position: relative;
 margin-left: 3rem;
 padding: 35px 0 25px;
 }
 
-.nav-list-right-inloggen::before {
+.nav-list-right-inloggen, .nav-list-right-zoeken {
+padding-left: 50px;
+}
+    
 
+.nav-list-right-inloggen::before {
+content: ' ';
+position: absolute;
+background-image: url(https://www.npostart.nl/images/asset_web_main-menu_mijn-npo.svg);
+background-repeat: no-repeat;
+height: 23px;
+width: 23px;
 }
 
 .nav-list-right-zoeken::before {
-
+    content: ' ';
+    position: absolute;
+    background-image: url(https://www.npostart.nl/images/asset_web_main-menu_search.svg);
+    background-repeat: no-repeat;
+    height: 23px;
+    width: 23px;
 }
 
 /*HERO SECTION*/
@@ -104,6 +120,7 @@ display: flex;
 align-items: center;
 position: relative;
 grid-column-start: 2;
+
 }
 
 
@@ -122,6 +139,7 @@ font-size: 3.5rem;
 text-shadow: 5px 5px 13px rgba(0,0,0,.5);   
 margin: 3.5rem 0 1rem 0; 
 padding: 1.5rem 0;
+line-height: 60px;
 }
 
 .hero-subtitle {
@@ -132,9 +150,9 @@ margin: 0 0 1rem;
 
 .hero-btn {
 position: relative;
-    background-color: #ff6d00;
+background-color: #ff6d00;
 height: 3rem;
-padding: 0 4rem 0 1rem;
+padding: 0 3rem 0 1rem;
 border-radius: 4px;
 border: 0;
 font-family: sans-serif;
@@ -148,12 +166,23 @@ color: white;
 
 .hero-btn::after {
 position: absolute;
-    content: "";
-background-image: url(https://www.npostart.nl/images/asset_player_play.svg) no-repeat 50%;
+    content: ' ';
+background-image: url(https://www.npostart.nl/images/asset_player_play.svg);
+background-repeat: no-repeat;
 background-color: rgba(0, 0, 0, 0);
-
+background-size: 50%;
+height: 23px;
+width: 40px;
+background-position: 10px 2px;
 }
 
+.grow {
+    transition: all .2s ease-in-out; 
+}
+
+.grow:hover{
+    transform: scale(1.1); 
+}
 
 .content-section{
 display: grid;
@@ -177,22 +206,19 @@ margin: 40px 0 30px;
 .content-row {
  display: flex;
  flex-direction: row;
-/* height: 17rem;*/
-
 overflow: auto;
+
 }
 
 .content-row-card {
 flex: 0 0 20rem;
 position: relative;
-width: 20rem;
 margin-right: 5px;
 }
 
 
 .card-image {
-    height: 100%;
-    width: 100%;
+width: 100%;
 object-fit: cover;
 }
 
@@ -216,11 +242,23 @@ margin: 0;
 
 }
 
-.content-grid{
+.grow-row {
+    transition: all .2s ease-in-out; 
+}
+
+.grow-row:hover {
+    transform: scale(1.03); 
+    z-index: 99;
+    box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.8);
+}
+
+/*CONTENT GRID*/
+
+.content-grid {
     display: grid;
     max-width: 90rem;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 11rem 11rem;
+    grid-template-rows: 13rem 13rem;
     grid-gap: 5px;
 }
 .content-card {
@@ -270,6 +308,15 @@ margin: 0;
 vertical-align: bottom;
 }
 
+.grow-grid {
+    transition: all .2s ease-in-out; 
+}
+
+.grow-grid:hover{
+    transform: scale(1.03); 
+    z-index: 99;
+    box-shadow: -2px 6px 18px 0px rgba(0,0,0,0.8);
+}
 
 /*FOOTER*/
 
